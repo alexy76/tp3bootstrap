@@ -1,0 +1,20 @@
+body{
+    font-family: 'Marvel', sans-serif;
+    color: white;
+}
+
+header{
+    background: url('header.jpg') no-repeat fixed top;
+    height: 25vh;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px){
+
+    header{
+        background: url('header.jpg') no-repeat fixed top;
+        height: 20vh;
+        width: 100%;
+    }
+
+}

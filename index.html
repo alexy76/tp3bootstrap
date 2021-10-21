@@ -9,6 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marvel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
     <title>TP 3 - Bootstrap - Marvel</title>
 
@@ -16,49 +21,145 @@
 
 <body class="bg-dark">
 
-    <header>
-        <img class="w-100" src="assets/img/header.jpg" alt="Hulk" title="Hulk" />
+    <header class="row justify-content-center">
+
+      <div class="row justify-content-center col-lg-6 d-flex align-items-end">
+
+        <p class="col-6 text-center text-white fs-4">LES PERSONNAGES<br>"HULK"</p>
+
+      </div>
+      
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top border-bottom border-success">
-        <div class="container">
-
-          <a class="navbar-brand" href="#"><i class="ms-4 bi bi-bookmark-check-fill text-white"></i></a>
-
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-list text-success"></i>
+      <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+              aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="bi bi-list text-success"></i>
           </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active ms-3 text-success text-decoration-none" aria-current="page" href="#">Les personnages</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link ms-3 text-secondary text-decoration-none" href="#">Les films</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link ms-3 text-secondary text-decoration-none" href="#">Les prochaines sorties DVD</a>
-              </li>
-            </ul>
-
+              </ul>
+              <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
           </div>
-
-        </div>
-      </nav>
+      </div>
+    </nav>
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-4">
+              <h1 class=" display-5 text-center mt-2 mb-2">L'incroyable Hulk</h1>
+              <img class="img-fluid border border-light" src="assets/css/hulk.jpg" />
+              <div class="">
+                <p class="display-6 text-center mt-3"><i class="fas fa-biohazard text-success"></i>Détails personnage</p>
+                <div class="fs-5 text-center">Humain altéré</div>
+                <div class="fs-5 text-center">Robert Bruce Banner</div>
+                <div class="fs-5 text-center">Chercheur et physicien Nucléaire</div>
 
+              </div>
             </div>
-            <div class="col-lg-9">
+            <div class="col-lg-8 pt-5">
 
+              <h2 class="text-center">Liste des personnages Marvel</h2>
+
+              <table class="mt-5 table table-dark table-striped table-hover table-borderless align-middle text-center">
+                <!-- <thead>
+                  <tr>
+                    <th scope="col">Liste des Supers Héros</th>
+                  </tr>
+                </thead> -->
+                <tbody class="">
+                  <tr>
+                    <th scope="row"><img src="assets/css/hulk.jpg" height="100px" width="150px"></th>
+                    <td>L'incroyable Hulk</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">+d'info</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><img src="assets/css/ironman.jpg" height="100px" width="150px"></th>
+                    <td>Iron Man</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">+d'info</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><img src="assets/css/spiderman.jpg" height="100px" width="150px"></th>
+                    <td colspan="">Spider-Man</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">+d'info</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><img src="assets/css/thor.jpg" height="100px" width="150px"></th>
+                    <td colspan="">Thor</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">+d'info</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><img src="assets/css/captainamerica.jpeg" height="100px" width="150px"></th>
+                    <td colspan="">Captain America</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">+d'info</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><img src="assets/css/blackpanther.jpg" height="100px" width="150px"></th>
+                    <td colspan="">Black Panther</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">+d'info</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><img src="assets/css/antman.jpg" height="100px" width="150px"></th>
+                    <td colspan="">Ant-Man</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">+d'info</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><img src="assets/css/drstrange.jpg" height="100px" width="150px"></th>
+                    <td colspan="">Docteur Strange</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">+d'info</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><img src="assets/css/thanos.jpg" height="100px" width="150px"></th>
+                    <td colspan="">Thanos</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">+d'info</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><img src="assets/css/deadpool.jpg" height="100px" width="150px"></th>
+                    <td colspan="">Deadpool</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">+d'info</button></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
         </div>
 
     </div>
+
+
+<!-- Modal -->
+    <div class="modal" tabindex="-1" id="exampleModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-dark">
+            <h5 class="w-100 modal-title text-center border boder-white">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body bg-dark">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer bg-dark">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success">Saves changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Fin Modal  -->
+
+    <footer class="d-flex justify-content-between border-top border-success pt-3 pb-1">
+      <p class="ms-3">
+        <a href="#">Mentions Légales</a>
+      </p>
+      <p class="me-3">
+        Marvel officiel copyright by Marvel
+      </p>
+    </footer>
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
